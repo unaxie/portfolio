@@ -1,0 +1,23 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $purple-700;
+    background-image: url(../images/bg/pattern-star.png);
+    background-size: 150px;
+}
+
+.header-index::before {
+    @include media-breakpoint-up(md) {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/bg/bg-deco-1.png), url(../images/bg/bg-deco-2.png);
+        background-repeat: no-repeat;
+        background-size: 35%, 45%;
+        background-position: left top, right bottom;
+    }
+
+}

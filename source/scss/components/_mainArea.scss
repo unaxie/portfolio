@@ -1,0 +1,57 @@
+.mainArea {
+    position: relative;
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: $spacer*6;
+
+    @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.mainPic {
+    background-image: url(../images/mainPic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: percentage(853/862);
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: percentage(1.3);
+    }
+}
+
+.mainTitle {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    width: 90%;
+    bottom: $spacer*4;
+
+    @include media-breakpoint-down(sm) {
+        bottom: $spacer*2;
+
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        background-image: url(../images/mainTitle.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: percentage(156/706);
+
+        @include media-breakpoint-down(sm) {
+            // padding-top: percentage(1.5);
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+    }
+}

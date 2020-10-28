@@ -1,0 +1,30 @@
+// back top btn
+.backToTop {
+    position: fixed;
+    bottom: $spacer*3;
+    right: $spacer*2;
+    cursor: pointer;
+    display: none;
+    z-index: 500;
+    @include media-breakpoint-down(md) {
+        bottom: $spacer*3;
+        right: $spacer;
+    }
+    .backToTop-figure {
+        background-image: url(../images/arrow-up-circle.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        width: $spacer*3.5;
+        height: $spacer*3.5;
+        @include transition($transition-base);
+
+        @include hover-focus() {
+            opacity: .7;
+        }
+        @include media-breakpoint-down(md) {
+            width: $spacer*3;
+            height: $spacer*3;
+        }
+    }
+}

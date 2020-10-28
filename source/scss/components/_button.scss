@@ -1,0 +1,36 @@
+.btn-circle {
+    background-color: $yellow-400;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $spacer*3;
+    height: $spacer*3;
+
+    @include hover-focus() {
+        background-color: rgba($third, .7);
+    }
+
+    &>.icon {
+        color: $secondary;
+    }
+}
+
+.btn-circle-outline {
+    border: 1px solid $purple-400;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $spacer*2.5;
+    height: $spacer*2.5;
+
+    @include hover-focus() {
+        background-color: rgba($purple-400, .7);
+    }
+
+    &>.icon {
+        color: $gray-400;
+        font-size: $small-font-size;
+    }
+}

@@ -1,0 +1,74 @@
+extends ./layout/_layout
+
+block title
+    title Una's Portfolio
+    link(rel="stylesheet", href="css/all.css?"+new Date().getTime())
+block header
+    header.header.header-index.vh-100
+        nav.navbar.navbar-header.container-fluid
+            a.navbar-brand.brand
+            button.navbar-toggler.navbar-toggler-x(type="button",data-toggle="collapse",data-target="#headNavbarContent",aria-controls="headNavbarContent",aria-expanded="false",aria-label="Toggle navigation")
+                .toggler-bar
+        .collapse.collapse-header#headNavbarContent
+            .collapse-content.container-fluid
+                a.navbar-brand.brand-nav
+                .collapse-title
+                    | UnaXie’s
+                    br
+                    | Portfolio
+                ul.navbar-nav
+                    li.nav-item(attr-operate="navbar-sm")
+                        a.nav-link(href="#",data-target="#HOME",data-operate="SmoothScroll")
+                            span HOME
+                    li.nav-item(attr-operate="navbar-sm")
+                        a.nav-link(href="#",data-target="#ABOUT",data-operate="SmoothScroll") 
+                            span ABOUT
+                    li.nav-item(attr-operate="navbar-sm")
+                        a.nav-link(href="#",data-target="#WORKS",data-operate="SmoothScroll")
+                            span WORKS
+                .navbar-underNav   
+                    a.btn.btn-circle(href="#")
+                        i.icon.icon-mail
+                    a.btn.btn-circle(href="#")
+                        i.icon.icon-linkedin
+                    a.disabled.btn.btn-circle(href="#")
+                        i.icon.icon-github
+        .mainArea.container-lg
+            .mainPic
+            .mainTitle
+
+block content
+    section.container.navWrapper
+
+block footer
+    .footer
+        .container
+            .brand
+            ul.footer-nav
+                li.nav-item(attr-operate="navbar-sm")
+                    a.nav-link(href="#",data-target="#HOME",data-operate="SmoothScroll")
+                        span HOME
+                li.nav-item(attr-operate="navbar-sm")
+                    a.nav-link(href="#",data-target="#ABOUT",data-operate="SmoothScroll") 
+                        span ABOUT
+                li.nav-item(attr-operate="navbar-sm")
+                    a.nav-link(href="#",data-target="#WORKS",data-operate="SmoothScroll")
+                        span WORKS
+            .footer-underNav   
+                a.btn.btn-circle-outline(href="#")
+                    i.icon.icon-mail
+                a.btn.btn-circle-outline(href="#")
+                    i.icon.icon-linkedin
+                a.disabled.btn.btn-circle-outline(href="#")
+                    i.icon.icon-github
+            .d-none.d-lg-block 本網站建議  Google Chrome / Firefox / Safari 等瀏覽器瀏覽
+            p.small © 2020 Una Xie
+    //- include ./layout/_footer
+block scrollBtn
+    include ./layout/_scrollBtn
+block scripts
+    include ./layout/_scripts
+    script.
+        $(function() {
+            goTop();
+        });
