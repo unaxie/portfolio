@@ -1,0 +1,17 @@
+.section {
+    padding-top: $spacer*6;
+    padding-bottom: $spacer*6;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.section-aboutMe {
+    background-color: $gray-100;
+}
+
+.section-works {
+    background-color: $gray-200;
+
+}

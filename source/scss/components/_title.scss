@@ -1,0 +1,77 @@
+.title {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    &-content {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-bottom: $spacer*4;
+
+        &:before {
+            content: "";
+            background-image: url(../images/title-deco.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            width: 30px;
+            height: 36px;
+            position: absolute;
+            align-self: flex-end;
+            right: -$spacer;
+            top: -$spacer;
+        }
+
+        &:after {
+            content: "";
+            background-color: $secondary;
+            height: $spacer/2;
+            width: $spacer*3.5;
+            display: block;
+            border-radius: $border-radius-lg;
+            margin-top: $spacer/2;
+        }
+    }
+}
+
+.subTitle {
+    color: $secondary;
+    font-style: italic;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacer*2;
+
+    &::after {
+        content: "";
+        height: 2px;
+        display: inline-block;
+        background-color: $secondary;
+        position: absolute;
+        right: 0;
+        left: 160px;
+    }
+}
+
+.pillTitle {
+    position: relative;
+    &-content {
+        display: inline-block;
+        background-color: $purple-500;
+        color: $white;
+        font-size: $small-font-size;
+        font-weight: $font-weight-light;
+        font-style: italic;
+        text-align: center;
+        border-radius: $spacer;
+        padding: $spacer/4 $spacer*1.5;
+
+        &::after {
+            content: ".";
+        }
+    }
+}

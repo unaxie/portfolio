@@ -34,3 +34,29 @@
         font-size: $small-font-size;
     }
 }
+
+.btn-mouse {
+    border: 3px solid $yellow-400;
+    border-radius: $spacer*2;
+    display: block;
+    height: 60px;
+    width: 38px;
+    position: absolute;
+    z-index: 10;
+    align-self: center;
+    bottom: $spacer*5;
+
+    &:before {
+        content: "";
+        display: block;
+        border: 3px solid $yellow-400;
+        border-radius: $spacer;
+        height: 14px;
+        width: 8px;
+        top: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        animation: scrolling 1s linear infinite;
+    }
+}

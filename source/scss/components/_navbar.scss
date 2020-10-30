@@ -39,7 +39,7 @@
         height: $spacer*3;
         position: relative;
         background-color: $secondary;
-        z-index: 3;
+        z-index: $zindex-fixed;
 
         .toggler-bar {
             position: relative;
@@ -111,7 +111,7 @@
 .collapse-header {
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: $zindex-dropdown;
     background-color: $secondary;
     width: 100%;
     top: 0;

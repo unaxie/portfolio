@@ -1,6 +1,8 @@
 // Common
 @import "common/header";
 @import "common/footer";
+@import "common/content";
 
 // Page
-// @import "page/index";
+@import "page/aboutMe";
+@import "page/works";

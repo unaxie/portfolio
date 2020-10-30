@@ -4,7 +4,7 @@ block title
     title Una's Portfolio
     link(rel="stylesheet", href="css/all.css?"+new Date().getTime())
 block header
-    header.header.header-index.vh-100
+    header.header.header-index.min-vh-100
         nav.navbar.navbar-header.container-fluid
             a.navbar-brand.brand
             button.navbar-toggler.navbar-toggler-x(type="button",data-toggle="collapse",data-target="#headNavbarContent",aria-controls="headNavbarContent",aria-expanded="false",aria-label="Toggle navigation")
@@ -36,10 +36,84 @@ block header
         .mainArea.container-lg
             .mainPic
             .mainTitle
+        .btn.btn-mouse
 
 block content
-    section.container.navWrapper
-
+    section.section.section-aboutMe
+        .container
+            h2.h2.title 
+                .title-content ABOUT ME
+            .row
+                .col-lg-6.aboutMe-picArea
+                    .portfolioPic
+                    .portfolioContact
+                        span.icon.icon-mail
+                        span.font-weight-bold una416@gmail.com
+                .col-lg-6.aboutMe-textArea
+                    h5.h5.subTitle EXPERIENCE
+                    .row
+                        .col-lg-6
+                            .pillTitle
+                                .pillTitle-content Work
+                            ul.expList.expList-lineDeco
+                                li.expList-item
+                                    .exp-title 2019~NOW
+                                    .exp-content
+                                        | Freelancer - 
+                                        br
+                                        | UI Designer / 
+                                        br
+                                        | Front-end Engineer 
+                                li.expList-item
+                                    .exp-title 2016.11 ~ 2019.2
+                                    .exp-content
+                                        | 無限創意科技 - 前端工程師
+                                        br
+                                        | 數位前進 - 前端工程師 
+                                li.expList-item
+                                    .exp-title 2016.4 ~ 2016.11
+                                    .exp-content
+                                        | 巴克斯數位 - 網頁工程師 
+                                li.expList-item
+                                    .exp-title 2010.8 ~ 2014.10
+                                    .exp-content
+                                        | 藏墨數位藝術 - 視覺設計師
+                                        br
+                                        | 四方通行旅行社 - 網頁設計師 
+                        .col-lg-6
+                            .pillTitle
+                                .pillTitle-content Volunteer
+                            ul.expList
+                                li.expList-item
+                                    .exp-title 2017
+                                    .exp-content
+                                        | MOPCON - 前端工程師 
+                                li.expList-item
+                                    .exp-title 2017
+                                    .exp-content
+                                        | 高雄前端開發者大會 -
+                                        br
+                                        | 視覺設計師 / 前端工程師 
+                                li.expList-item
+                                    .exp-title 2016
+                                    .exp-content
+                                        | MOPCON - UI Designer 
+                            .pillTitle
+                                .pillTitle-content Education
+                                ul.expList.expList-lineDeco
+                                    li.expList-item
+                                        .exp-title 2017
+                                        .exp-content
+                                            | 國立雲林科技大學 -
+                                            br
+                                            | 數位媒體設計系畢業
+    section.section.section-works
+            .container
+                h2.h2.title 
+                    .title-content WORKS
+                .row.worksList
+                    .col-md-4
+                        .project
 block footer
     .footer
         .container
