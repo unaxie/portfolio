@@ -1,0 +1,16 @@
+.ratioImg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+    }
+
+    &-1by1 {
+        padding-top: 100%;
+    }
+}

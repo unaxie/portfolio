@@ -13,5 +13,37 @@
 
 .section-works {
     background-color: $gray-200;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url(../images/bg/pattern-o.png);
+        display: block;
+
+        border-radius: 50%;
+        opacity: .3;
+        position: absolute;
+        z-index: 1;
+
+
+        filter: grayscale(1);
+        z-index: 0;
+
+        @include media-breakpoint-down(sm) {
+            background-size: 5%;
+            right: -50vw;
+            bottom: -20px;
+            height: 450px;
+            width: 450px;
+        }
+
+        @include media-breakpoint-up(md) {
+            background-size: 4%;
+            right: -150px;
+            bottom: -250px;
+            height: 650px;
+            width: 650px;
+        }
+    }
 
 }

@@ -1,6 +1,6 @@
 function smoothScroll(target) {
     $('body, html').animate(
-        { 'scrollTop': $(target).offset().top - $('.header').height() },
+        { 'scrollTop': $(target).offset().top },
         600
     );
 }
@@ -15,6 +15,22 @@ function goTop() {
             $('#backToTop').fadeIn("fast");
         } else {
             $('#backToTop').stop().fadeOut("fast");
+        }
+    });
+}
+
+function operateSideNav() {
+    var navigationItems = $("[data-operate='SmoothScroll']");
+    // updateNavigation();
+    // $(window).on('scroll', function () {
+    //     updateNavigation();
+    // });
+
+    navigationItems.on("click", function (event) {
+        event.preventDefault();
+        smoothScroll($(this).attr("href"));
+        if ($(".collapse-header").hasClass("show")) {
+            $(".navbar-toggler").click();
         }
     });
 }
@@ -37,29 +53,29 @@ function goTop() {
 //     }
 // }
 
-function navbarHeaderControl() {
-    $('.navbar-header>button.navbar-toggler').on('click', function () {
-        if ($(this).attr('aria-expanded') === 'true') {
-            $('body').removeClass('fixed-top');
-        } else {
-            $('body').addClass('fixed-top');
-        }
-    })
-}
+// function navbarHeaderControl() {
+//     $('.navbar-header>button.navbar-toggler').on('click', function () {
+//         if ($(this).attr('aria-expanded') === 'true') {
+//             $('body').removeClass('fixed-top');
+//         } else {
+//             $('body').addClass('fixed-top');
+//         }
+//     })
+// }
 
-function navbarHeaderOperate() {
-    var navbarSm = '[attr-operate="navbar-sm"]';
-    var navMainSm = '[attr-operate="nav-main-sm"]';
-    $(navbarSm + '>.nav-link').on('click', function (e) {
-        e.preventDefault();
-        $('.navbar-header>button.navbar-toggler').click();
-        $('body').removeClass('fixed-top');
-        var thisTarget = $(this).attr('data-target');
-        if ($(thisTarget).hasClass('show')) {
-            smoothScroll($(thisTarget));
-        } else {
-            $(navMainSm + '>.nav-content' + '[data-target="' + thisTarget + '"]').click();
-            smoothScroll($(thisTarget));
-        }
-    })
-}
+// function navbarHeaderOperate() {
+//     var navbarSm = '[attr-operate="navbar-sm"]';
+//     var navMainSm = '[attr-operate="nav-main-sm"]';
+//     $(navbarSm + '>.nav-link').on('click', function (e) {
+//         e.preventDefault();
+//         $('.navbar-header>button.navbar-toggler').click();
+//         $('body').removeClass('fixed-top');
+//         var thisTarget = $(this).attr('data-target');
+//         if ($(thisTarget).hasClass('show')) {
+//             smoothScroll($(thisTarget));
+//         } else {
+//             $(navMainSm + '>.nav-content' + '[data-target="' + thisTarget + '"]').click();
+//             smoothScroll($(thisTarget));
+//         }
+//     })
+// }

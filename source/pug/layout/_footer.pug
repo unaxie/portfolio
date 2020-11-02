@@ -1,3 +1,24 @@
 .footer
     .container
-        .small 本網站建議  Google Chrome / Firefox / Safari 等瀏覽器瀏覽
+        .brand
+        ul.footer-nav
+            li.nav-item(attr-operate="navbar-sm")
+                a.nav-link(href="#",data-target="#HOME",data-operate="SmoothScroll")
+                    span HOME
+            li.nav-item(attr-operate="navbar-sm")
+                a.nav-link(href="#",data-target="#ABOUT",data-operate="SmoothScroll") 
+                    span ABOUT
+            li.nav-item(attr-operate="navbar-sm")
+                a.nav-link(href="#",data-target="#WORKS",data-operate="SmoothScroll")
+                    span WORKS
+        .footer-underNav   
+            a.btn.btn-circle-outline(href="mailto:una416@gmail.com")
+                i.icon.icon-mail
+            a.btn.btn-circle-outline(href="https://www.linkedin.com/in/una-xie-0093167a/",target="_blank")
+                i.icon.icon-linkedin
+            a.disabled.btn.btn-circle-outline(href="#")
+                i.icon.icon-github
+            a.btn.btn-circle-outline(href="https://dribbble.com/UnaXie",target="_blank")
+                i.icon.icon-dribbble
+        .d-none.d-lg-block 本網站建議  Google Chrome / Firefox / Safari 等瀏覽器瀏覽
+        p.small © 2020 Una Xie

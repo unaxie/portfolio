@@ -60,3 +60,34 @@
         animation: scrolling 1s linear infinite;
     }
 }
+
+.btn-secondary {
+    font-weight: $font-weight-bold;
+    color: $yellow-400;
+    background-color: $secondary;
+    padding: $spacer $spacer*3;
+    border-radius: 10px;
+    position: relative;
+
+    &:before {
+        content: "";
+        background-image: url(../images/bg/pattern-o.png);
+        background-size: 25%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    @include hover-focus() {
+        color: $yellow-400;
+        background-color: darken($secondary, 5.5%);
+
+        &:before {
+            opacity: .3;
+        }
+    }
+}

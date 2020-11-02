@@ -1,6 +1,103 @@
-.worksList{
+.projectItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacer*2;
 
+    @include media-breakpoint-up(lg) {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column-reverse;
+    }
 }
-.project{
-    
+
+.projectHover {
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+        .projectHover-inner {
+            margin-top: $spacer/2;
+            margin-left: $spacer/2;
+        }
+
+        .project-title {
+            font-weight: $font-weight-bold;
+        }
+
+        .project-detail {
+            font-size: $small-font-size;
+        }
+
+        .projectImage {
+            border-radius: 10px;
+        }
+
+        @at-root .projectHover {
+            @include hover() {
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    @include media-breakpoint-up(lg) {
+        .projectHover-inner {
+            opacity: 0;
+            display: flex;
+            background-color: transparentize($primary, 0.5);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: $white;
+            @include transition($transition-base);
+
+            &:before {
+                content: "";
+                background-image: url(../images/bg/pattern-o.png);
+                background-size: 20%;
+                display: block;
+                opacity: .1;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+
+            @at-root .projectHover {
+                @include hover() {
+                    .projectHover-inner {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .project-title {
+                font-size: $h4-font-size;
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: $spacer;
+
+                &::after {
+                    content: "";
+                    background-color: $yellow-400;
+                    height: $spacer*.38;
+                    width: $spacer*3.5;
+                    display: block;
+                    border-radius: $border-radius-lg;
+                    margin-top: $spacer/2;
+                }
+            }
+        }
+    }
+
+    .projectImage {
+        width: 100%;
+    }
 }
