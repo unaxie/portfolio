@@ -6,6 +6,7 @@
     color: $gray-400;
     padding-top: $spacer*4;
     padding-bottom: $spacer*2;
+    opacity: 0;
 
     a.text-link {
         color: $white;
@@ -45,6 +46,7 @@
 .footer-underNav {
     margin-top: $spacer*3;
     margin-bottom: $spacer*2;
+
     .btn {
         margin-right: $spacer/3;
         margin-left: $spacer/3;
