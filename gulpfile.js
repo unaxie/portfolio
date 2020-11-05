@@ -30,8 +30,8 @@ console.log(options);
 
 gulp.task('clean', function () {
     return gulp.src(path.public, {
-            read: false
-        }) // 選項讀取：false阻止gulp讀取文件的內容，使此任務更快。
+        read: false
+    }) // 選項讀取：false阻止gulp讀取文件的內容，使此任務更快。
         .pipe($.clean());
     cb(err)
 });
@@ -62,7 +62,7 @@ gulp.task('cleanPugTmpl', ['pug'], function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src([path.source + '**/*.js', '!node_modules/**' ])
+    return gulp.src([path.source + '**/*.js', '!node_modules/**'])
         .pipe($.plumber({
             errorHandler: $.notify.onError("js compile error")
         }))
@@ -93,7 +93,7 @@ gulp.task('sass', function () {
         .pipe($.postcss(processors))
         .pipe($.if(options.env === 'production', $.minifyCss())) // 假設開發環境則壓縮 CSS
         .pipe($.sourcemaps.write('./maps'))
-        .pipe(gulp.dest(path.public+'css/'))
+        .pipe(gulp.dest(path.public + 'css/'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -161,7 +161,7 @@ gulp.task('browserSync', function () {
 gulp.task('watch', function () {
     gulp.watch(path.source + '**/*.pug', ['pug']);
     gulp.watch(path.source + '**/*.pug', ['cleanPugTmpl']);
-    gulp.watch(path.source +'**/*.+(scss|sass)', ['sass']);
+    gulp.watch(path.source + '**/*.+(scss|sass)', ['sass']);
     gulp.watch(path.source + './maps', ['cleanSassMaps']);
     gulp.watch(path.source + 'plugin/**/*', ['plugin']);
     gulp.watch(path.source + '**/*.js', ['scripts']);
@@ -169,7 +169,7 @@ gulp.task('watch', function () {
     gulp.watch(path.source + 'fonts/**/*', ['fonts']);
 });
 
-gulp.task('sequence', gulpSequence('clean', 'pug', 'cleanPugTmpl', 'sass','cleanSassMaps', 'scripts', 'plugin', 'imageCompress'));
+gulp.task('sequence', gulpSequence('clean', 'pug', 'cleanPugTmpl', 'sass', 'cleanSassMaps', 'scripts', 'plugin', 'imageCompress'));
 
-gulp.task('default', ['pug', 'cleanPugTmpl', 'sass','cleanSassMaps', 'scripts', 'plugin', 'imageCompress', 'browserSync', 'fonts', 'watch']);
+gulp.task('default', ['pug', 'cleanPugTmpl', 'sass', 'cleanSassMaps', 'scripts', 'plugin', 'imageCompress', 'browserSync', 'fonts', 'watch', 'otherFiles']);
 gulp.task('build', ['sequence'])
