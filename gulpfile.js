@@ -142,7 +142,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('deploy', function () {
-    return gulp.src('./public/**/*')
+    return gulp.src(path.public + '**/*')
         .pipe(ghPages());
 });
 
