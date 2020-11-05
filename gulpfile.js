@@ -171,5 +171,5 @@ gulp.task('watch', function () {
 
 gulp.task('sequence', gulpSequence('clean', 'pug', 'cleanPugTmpl', 'sass', 'cleanSassMaps', 'scripts', 'plugin', 'imageCompress'));
 
-gulp.task('default', ['pug', 'cleanPugTmpl', 'sass', 'cleanSassMaps', 'scripts', 'plugin', 'imageCompress', 'browserSync', 'fonts', 'watch', 'otherFiles']);
-gulp.task('build', ['sequence'], 'deploy')
+gulp.task('default', ['pug', 'cleanPugTmpl', 'sass', 'cleanSassMaps', 'scripts', 'plugin', 'imageCompress', 'browserSync', 'fonts', 'watch', 'otherFiles','deploy']);
+gulp.task('build', ['sequence'])

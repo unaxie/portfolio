@@ -38,7 +38,6 @@ function operateSideNav() {
 
 function scrollOpacity() {
     $(window).scroll(function () {
-        console.log($(window).scrollTop());
         if ($(window).scrollTop() > $("#HOME").height() / 2) {
             $("#ABOUT").css("opacity", "1").addClass("fadeIn");
         };
