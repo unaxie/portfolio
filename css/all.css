@@ -1951,10 +1951,16 @@ fieldset:disabled a.btn {
       bottom: -2rem; }
   @media (max-width: 991.98px) {
     .expList-lineDeco > .expList-item:last-child:before {
+      bottom: -1rem; } }
+  @media (min-width: 992px) {
+    .expList-lineDeco-work > .expList-item:last-child:before {
+      bottom: -100vh; } }
+  @media (max-width: 991.98px) {
+    .expList-lineDeco-education > .expList-item:last-child:before {
       bottom: -9rem; } }
   @media (min-width: 992px) {
-    .expList-lineDeco > .expList-item:last-child:before {
-      bottom: -25vh; } }
+    .expList-lineDeco-education > .expList-item:last-child:before {
+      bottom: -100vh; } }
 
 .exp-title {
   font-weight: 700;
