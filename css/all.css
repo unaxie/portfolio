@@ -1426,7 +1426,7 @@ fieldset:disabled a.btn {
     content: "";
     background-image: url(../images/portfolio-pic.jpg);
     display: block;
-    background-size: contain;
+    background-size: 101%;
     background-repeat: no-repeat;
     padding-top: 100%;
     border-radius: 10px; }
@@ -1996,24 +1996,4 @@ fieldset:disabled a.btn {
 body {
   letter-spacing: 2px; }
 
-@keyframes scrolling {
-  0% {
-    opacity: 0;
-    top: 5px; }
-  30% {
-    opacity: 1;
-    top: 10px; }
-  100% {
-    opacity: 0;
-    top: 25px; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.fadeIn {
-  animation: fadeIn 1.5s both; }
-
-/*# sourceMappingURL=maps/all.css.map */
+@keyfr
