@@ -30,11 +30,30 @@
         &>.expList-item {
             &:last-child:before {
                 @include media-breakpoint-down(md) {
+                    bottom: -$spacer;
+                }
+            }
+        }
+    }
+    &-lineDeco-work {
+        &>.expList-item {
+            &:last-child:before {
+                @include media-breakpoint-up(lg) {
+                    bottom: -100vh;
+                }
+            }
+        }
+    }
+
+    &-lineDeco-education {
+        &>.expList-item {
+            &:last-child:before {
+                @include media-breakpoint-down(md) {
                     bottom: -$spacer*9;
                 }
 
                 @include media-breakpoint-up(lg) {
-                    bottom: -25vh;
+                    bottom: -100vh;
                 }
             }
         }
