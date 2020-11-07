@@ -22,6 +22,11 @@
 
     .projectHover-inner {
         word-break: keep-all;
+
+        @include media-breakpoint-up(lg) {
+            border-radius: 10px;
+            overflow: hidden;
+        }
     }
 
     @include media-breakpoint-down(md) {
