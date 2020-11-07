@@ -1499,6 +1499,10 @@ fieldset:disabled a.btn {
     font-size: 12px; }
   .projectHover .projectHover-inner {
     word-break: keep-all; }
+    @media (min-width: 992px) {
+      .projectHover .projectHover-inner {
+        border-radius: 10px;
+        overflow: hidden; } }
   @media (max-width: 991.98px) {
     .projectHover .projectHover-inner {
       margin-top: 0.5rem;
