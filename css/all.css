@@ -1985,45 +1985,4 @@ fieldset:disabled a.btn {
 
 .exp-content {
   background-color: #EAEAEA;
-  padding: 0.8rem 1.2rem;
-  border-radius: 10px;
-  margin-left: 2rem;
-  letter-spacing: 0px;
-  word-break: keep-all; }
-
-.ratioImg {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block; }
-  .ratioImg:before {
-    content: '';
-    display: block;
-    width: 100%; }
-  .ratioImg-1by1 {
-    padding-top: 100%; }
-
-body {
-  letter-spacing: 2px; }
-
-@keyframes scrolling {
-  0% {
-    opacity: 0;
-    top: 5px; }
-  30% {
-    opacity: 1;
-    top: 10px; }
-  100% {
-    opacity: 0;
-    top: 25px; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.fadeIn {
-  animation: fadeIn 1.5s both; }
-
-/*# sourceMappingURL=maps/all.css.map */
+  padding: 0.
